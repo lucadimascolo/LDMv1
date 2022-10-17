@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,800,900&display=swap');
+
+:root {
+  --peach:      #E0AD8F;
+  --yellow:     #FBDC39;
+  --light-grey: #75787D;
+  --main: var(--yellow);
+}
+
+html, body {
+  border:  0;
+  margin:  0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Playfair Display', sans-serif;
+}
+
+header {height: 100vh;}
+
+header h5 {font-size: 20pt; font-weight: 400; color: var(--light-grey)}
+header h1 {font-size: 40pt; font-weight: 700}
+
+header img {width: 100%;}
+
+header .contact {
+  margin-top: 18pt;
+}
+
+section .container {margin-bottom: 100pt;}
+section h1 {font-weight: 700}
+
+section span.barred{
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 768px) {
+  .polaroid {display: none;}
+}
+
+.name {
+   z-index: 2;
+  position: relative;
+     color: inherit;
+}
+
+.name::before {
+    position: absolute;
+     z-index:       -1;
+        left:     -1pt;
+      bottom:      10%;
+      height:      28%;
+       width: calc(100% + 2pt);
+  background:      var(--main);
+   transform: rotate(-3.00deg);
+     content:       '';
+}
+
+.title {
+   z-index: 2;
+  position: relative;
+     color: inherit;
+}
+
+.title::before {
+    position: absolute;
+     z-index:       -1;
+        left:     -3pt;
+      bottom:       8%;
+      height:      28%;
+       width: calc(100% + 6pt);
+  background:      var(--main);
+     content:       '';
+}
+
+a {
+  color: var(--light-grey);
+  text-decoration: none;
+  -webkit-transition: all 0.20s ease-in-out;
+     -moz-transition: all 0.20s ease-in-out;
+      -ms-transition: all 0.20s ease-in-out;
+          transition: all 0.20s ease-in-out;
+}
+
+a::before {
+  background: none;
+  text-decoration: none;
+}
+
+a:hover {
+  color:  var(--main);
+  text-decoration: none;
+  -webkit-transition: all 0.20s ease-in-out;
+     -moz-transition: all 0.20s ease-in-out;
+      -ms-transition: all 0.20s ease-in-out;
+          transition: all 0.20s ease-in-out;
+}
+
+a i {
+     font-size: 15pt;
+  margin-right: 10pt;
+}
